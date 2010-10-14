@@ -6,16 +6,16 @@
   %h1
     IMPORTANT: You must be logged in to see this site
 
-%h2
-  = t(".with_openid")
+-#%h2
+  -#= t(".with_openid ss")
 
-= render :partial => "sessions/openid"
+-#= render :partial => "sessions/openid"
 
 -unless current_group.openid_only
   %h2
-    = t(".sign_in")
+    = "Login"
 
-  -form_for :user, resource, :url => session_path(resource_name), :html => {:class => "form"} do |f|
+  -form_for :user, resource, :url => session_path(resource_name), :html => {:class => "form", :style => "width:50%"} do |f|
     .group
       =f.label :email, t("email", :scope => "activerecord.attributes.user"), :class => "label"
       =f.text_field :email, :class => "text_field"
