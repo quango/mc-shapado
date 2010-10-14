@@ -1,8 +1,11 @@
 - if controller_name != 'sessions'
   = link_to t('devise.sessions.link'), new_session_path(resource_name)
   %br
+%div{:style=>"color:red; font-weight:bold;"}
+  = "Don't have an account? "
+  = link_to h('sign up'), new_user_path,:style=>"color:red; text-decoration:underline;"
+  = " in less than a minute"
 
-= link_to t('devise.registrations.link'), new_user_path
 %br
 
 - if devise_mapping.recoverable? && controller_name != 'passwords'

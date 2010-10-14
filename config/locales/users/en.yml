@@ -14,7 +14,7 @@ en:
       name_tooltip: Users sorted alphabetically
     new:
       title: Sign up as a new user
-      submit: Sign up
+      submit: Login
     edit:
       title: Settings
       submit: Save
